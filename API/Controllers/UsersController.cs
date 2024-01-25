@@ -29,7 +29,7 @@ public class UsersController : BaseApiController
         return users;
     }
 
-    
+    [AllowAnonymous]
     [HttpGet("{id}")]  // /api/users/2
 
     public async Task<ActionResult<AppUser>> GetUsers(int Id)
